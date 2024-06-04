@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+<title>Lista PC</title>
+</head>
+<body>
+		<div class="container-fluid">
+ <h3 class="text-center">LISTA PC DISPONIBILI</h3>
+  <form action ="buyPc" method ="post">
+    <div th:each = "computer : ${lista}">
+    <div class="card">
+    <div class = "card-body">
+    <p>ID: <span th:text = "${computer.id}"></span></p>
+    <p>Marca: <span th:text = "${computer.marca}"></span></p>
+    <p>Tipologia: <span th:text = "${computer.tipologia}"></span></p>
+    <p>Modello: <span th:text = "${computer.modello}"></span></p>
+    <p>Descrizione: <span th:text = "${computer.descrizione}"></span></p>
+    <p>Quantità: <span th:text = "${computer.qnt}"></span></p>
+    <img th:src="${computer.urlImage}" alt="pc" border="0">
+    <p>Prezzo: <span th:text = "${computer.prezzo}"></span></p>
+    <input type = "checkbox" id = "myCheck" name = "ordini" th:value = "${computer.id}">
+    <input type="number" id="prezzo" placeholder="numero di pezzi" name = "pezzi">
+    </div>
+    </div>
+    </div>
+    <input type="submit" value = "Acquista">
+    </form>
+   <br>
+   <br>
+    <button  class="btn btn-success" onclick = "location.href='/'"> Torna al Form principale</button>
+    </div>
+</body>
+</html>

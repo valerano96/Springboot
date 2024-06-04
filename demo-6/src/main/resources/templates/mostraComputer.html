@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Computer Aggiunto</title>
+</head>
+<body>
+    <h1>Dettagli del Computer</h1>
+    <p>Marca: <span th:text="${computer.marca}"></span></p>
+    <p>Tipologia: <span th:text="${computer.tipologia}"></span></p>
+    <p>Modello: <span th:text="${computer.modello}"></span></p>
+    <p>Descrizione: <span th:text="${computer.descrizione}"></span></p>
+    <p>Quantità: <span th:text="${computer.qnt}"></span></p>
+    <p>URL Immagine: <br> <img th:src="${computer.urlImage}"></p>
+    <p>Prezzo: <span th:text="${computer.prezzo}"></span></p>
+    <button onclick = "location.href='/'"> Nuovo Computer</button>
+</body>
+</html>
