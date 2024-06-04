@@ -14,7 +14,7 @@ public class Database {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/mydatabase");
         dataSource.setUsername("root");
-        dataSource.setPassword("Mangustami1240!");
+        dataSource.setPassword("");
         return dataSource;
     }
 }
